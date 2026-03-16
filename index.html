@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="dns-prefetch" href="https://www.google.com">
+<link rel="dns-prefetch" href="https://maps.googleapis.com">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ortobom Céu Azul | Colchões Ortobom em Belo Horizonte</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+.banner-carousel{
+width:100%;
+max-width:1200px;
+margin:20px auto;
+position:relative;
+overflow:hidden;
+border-radius:12px;
+aspect-ratio: 1 / 1.25;
+}
+.banner-slide{
+position:absolute;
+width:100%;
+height:100%;
+top:0;
+left:0;
+opacity:0;
+transition:opacity 1s ease;
+}
+
+.banner-slide img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+@media(max-width:768px){
+
+.banner-carousel{
+height:420px;
+}
+
+.banner-slide img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+}
+
+.banner-slide.active{
+opacity:1;
+}
+
+
+
+.banner-slide{
+position:absolute;
+width:100%;
+height:100%;
+object-fit:cover;
+top:0;
+left:0;
+opacity:0;
+transition:opacity 1s ease;
+}
+
+.banner-slide.active{
+opacity:1;
+}
+
+.banner-slide{
+position:absolute;
+width:100%;
+height:100%;
+object-fit:cover;
+top:0;
+left:0;
+opacity:0;
+transition:opacity 1s ease;
+}
+
+.banner-slide.active{
+opacity:1;
+}
+
+
+:root{
+--ortobom-blue:#0057B8;
+--ortobom-blue-dark:#003E8A;
+--ortobom-yellow:#FFD200;
+--light-bg:#f5f8ff;
+}
+
+body{
+font-family:'Inter',sans-serif;
+margin:0;
+background:var(--light-bg);
+color:#1a1a1a;
+}
+
+/* Barra de urgência */
+.top-bar{
+background:var(--ortobom-blue);
+color:#fff;
+text-align:center;
+padding:10px;
+font-size:14px;
+font-weight:600;
+}
+
+.countdown{
+font-weight:700;
+margin-left:8px;
+color:var(--ortobom-yellow);
+}
+
+header{
+background:#ffffff;
+padding:2px 10px; /* quase sem espaço */
+text-align:center;
+border-bottom:2px solid var(--ortobom-blue);
+}
+
+.logo{
+max-width:110px; /* logo bem menor */
+display:block;
+margin:auto;
+}
+
+/* HERO */
+.hero{
+padding:90px 20px;
+text-align:center;
+background:linear-gradient(180deg,#e8f0ff,#ffffff);
+}
+
+.hero h1{
+font-size:46px;
+margin-bottom:15px;
+font-weight:700;
+color:var(--ortobom-blue);
+}
+
+.hero p{
+font-size:20px;
+max-width:600px;
+margin:auto;
+color:#555;
+}
+
+.cta{
+display:inline-block;
+background:var(--ortobom-blue);
+color:#fff;
+padding:18px 34px;
+border-radius:12px;
+font-weight:600;
+text-decoration:none;
+margin-top:30px;
+font-size:20px;
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
+transition:all .25s;
+}
+
+.cta:hover{
+background:var(--ortobom-blue-dark);
+transform:scale(1.05);
+}
+
+.badges{
+margin-top:25px;
+font-size:14px;
+color:#666;
+}
+
+/* Benefícios */
+.features{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:25px;
+padding:60px 20px;
+}
+
+.feature{
+background:#fff;
+padding:25px;
+border-radius:14px;
+width:220px;
+text-align:center;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+font-weight:600;
+border-top:4px solid var(--ortobom-blue);
+}
+
+/* Produtos */
+.products{
+padding:80px 20px;
+text-align:center;
+}
+
+.products h2{
+font-size:34px;
+margin-bottom:40px;
+color:var(--ortobom-blue);
+}
+
+.product-carousel{
+display:flex;
+overflow:hidden; /* esconde os outros */
+scroll-behavior:smooth;
+gap:20px;
+padding-bottom:10px;
+justify-content:flex-start;
+}
+
+.product{
+flex:0 0 calc(25% - 15px); /* 4 produtos por vez */
+max-width:calc(25% - 15px);
+}
+
+.product-carousel::-webkit-scrollbar{
+height:8px;
+}
+
+.product-carousel::-webkit-scrollbar-thumb{
+background:var(--ortobom-blue);
+border-radius:10px;
+}
+
+.carousel-controls{
+margin-bottom:30px;
+}
+
+.carousel-btn{
+background:var(--ortobom-blue);
+color:#fff;
+border:none;
+padding:10px 16px;
+border-radius:8px;
+margin:0 5px;
+cursor:pointer;
+font-weight:600;
+}
+
+.carousel-btn:hover{
+background:var(--ortobom-blue-dark);
+}
+
+.product{
+background:#fff;
+border-radius:14px;
+padding:18px;
+width:260px;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+transition:.3s;
+}
+
+.product:hover{
+transform:translateY(-10px);
+box-shadow:0 20px 40px rgba(0,0,0,0.12);
+}
+
+.badge-best{
+position:absolute;
+background:var(--ortobom-yellow);
+color:#000;
+font-weight:700;
+padding:6px 10px;
+border-radius:8px;
+font-size:12px;
+margin-top:10px;
+margin-left:10px;
+}
+
+.product{
+position:relative;
+background:#fff;
+border-radius:14px;
+padding:18px;
+width:260px;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+transition:.3s;
+}
+
+.product img{
+width:100%;
+border-radius:10px;
+}
+
+.product h3{
+margin:14px 0;
+}
+
+.product button{
+margin-top:10px;
+background:var(--ortobom-blue);
+border:none;
+color:#fff;
+padding:12px 16px;
+border-radius:8px;
+font-weight:600;
+cursor:pointer;
+}
+
+.product button:hover{
+background:var(--ortobom-blue-dark);
+}
+
+/* Problema */
+.problem{
+background:var(--ortobom-blue);
+color:#fff;
+padding:80px 20px;
+text-align:center;
+}
+
+.problem h2{
+font-size:34px;
+}
+
+.problem p{
+max-width:600px;
+margin:auto;
+color:#e5e5e5;
+margin-top:15px;
+}
+
+/* Sessão confiança */
+.why{
+padding:80px 20px;
+text-align:center;
+}
+
+.why h2{
+font-size:32px;
+margin-bottom:40px;
+color:var(--ortobom-blue);
+}
+
+.why-grid{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:25px;
+}
+
+.why-card{
+background:#fff;
+padding:25px;
+width:230px;
+border-radius:14px;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+border-top:4px solid var(--ortobom-yellow);
+}
+
+/* Prova social */
+.testimonials{
+padding:80px 20px;
+background:#eef3ff;
+text-align:center;
+}
+
+.testimonials h2{
+color:var(--ortobom-blue);
+}
+
+.testimonial{
+max-width:600px;
+margin:20px auto;
+font-style:italic;
+}
+
+/* Contato */
+.contact{
+padding:80px 20px;
+text-align:center;
+}
+
+.contact-box{
+background:#fff;
+padding:35px;
+border-radius:16px;
+display:inline-block;
+box-shadow:0 15px 40px rgba(0,0,0,0.08);
+max-width:420px;
+}
+
+.contact-box h2{
+color:var(--ortobom-blue);
+}
+
+.store-img{
+width:140px;
+border-radius:50%;
+margin-bottom:10px;
+}
+
+iframe{
+border:0;
+width:100%;
+height:260px;
+border-radius:10px;
+margin-top:25px;
+}
+
+footer{
+background:var(--ortobom-blue-dark);
+color:#fff;
+text-align:center;
+padding:25px;
+margin-top:40px;
+}
+
+/* WhatsApp flutuante */
+.whatsapp-float{
+position:fixed;
+bottom:20px;
+right:20px;
+display:block;
+width:65px;
+height:65px;
+border-radius:50%;
+box-shadow:0 10px 25px rgba(0,0,0,0.3);
+}
+
+.whatsapp-float img{
+width:100%;
+height:100%;
+object-fit:contain;
+animation:pulseWhats 2s infinite;
+}
+
+@keyframes pulseWhats{
+0%{transform:scale(1);}
+50%{transform:scale(1.12);}
+100%{transform:scale(1);}
+}
+
+/* ajustes para celular */
+@media(max-width:768px){
+
+.hero h1{
+font-size:28px;
+line-height:1.2;
+}
+
+.product{
+flex:0 0 calc(50% - 10px);
+max-width:calc(50% - 10px);
+}
+
+.cta{
+width:100%;
+font-size:18px;
+padding:16px;
+}
+
+.hero{
+padding:60px 20px;
+}
+
+.products{
+padding:50px 20px;
+}
+
+.problem{
+padding:50px 20px;
+}
+
+.lead-container{
+flex-direction:column;
+}
+
+}
+
+@media(max-width:768px){
+
+/* título principal menor */
+.hero h1{
+font-size:28px;
+line-height:1.2;
+}
+
+/* mostrar 2 colchões no celular */
+.product{
+flex:0 0 calc(50% - 10px);
+max-width:calc(50% - 10px);
+}
+
+/* botão principal ocupar largura */
+.cta{
+width:100%;
+font-size:18px;
+padding:16px;
+}
+
+/* diminuir espaços das seções */
+.hero{
+padding:60px 20px;
+}
+
+.products{
+padding:50px 20px;
+}
+
+.problem{
+padding:50px 20px;
+}
+
+/* formulário em coluna */
+.lead-container{
+flex-direction:column;
+}
+
+}
+
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FurnitureStore",
+  "name": "Ortobom Céu Azul",
+  "image": "ortobom-logo-png.png",
+  "url": "https://www.instagram.com/ortobomceuazul/",
+  "telephone": "+55-31-99667-1868",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Rua Antônio José dos Santos, 548",
+    "addressLocality": "Belo Horizonte",
+    "addressRegion": "MG",
+    "postalCode": "31580-000",
+    "addressCountry": "BR"
+  },
+  "areaServed": "Belo Horizonte",
+  "priceRange": "$$",
+  "sameAs": [
+    "https://www.instagram.com/ortobomceuazul/"
+  ]
+}
+</script>
+
+</head>
+
+<body>
+
+<div class="top-bar">
+🔥 Promoções exclusivas terminam em <span id="countdown" class="countdown">00:15:00</span> — fale com um consultor agora
+</div>
+
+<header>
+<img loading="lazy" decoding="async" class="logo" src="ortobom-logo-png.png" alt="Ortobom Céu Azul">
+</header>
+
+<div class="banner-carousel">
+
+<picture class="banner-slide active">
+<source media="(max-width:768px)" srcset="base-celular.jpg">
+<img src="base-paisagem.jpg">
+</picture>
+
+<picture class="banner-slide">
+<source media="(max-width:768px)" srcset="liberty-celular.jpg">
+<img src="liberty-paisagem.jpg">
+</picture>
+
+<picture class="banner-slide">
+<source media="(max-width:768px)" srcset="orion-celular.jpg">
+<img src="orion-paisagem.jpg">
+</picture>
+
+</div>
+
+<section class="hero">
+
+<h1>Durma Melhor Todas as Noites</h1>
+
+<p>Descubra o colchão Ortobom ideal para seu conforto com atendimento especializado em Belo Horizonte.</p>
+
+<a class="cta" href="https://wa.me/5531996671868?utm_source=landing_page&utm_medium=whatsapp&utm_campaign=trafego_pago&text=Ol%C3%A1%2C%20gostaria%20de%20saber%20sobre%20os%20colch%C3%B5es%20ortobom.">Falar com especialista no WhatsApp</a>
+
+<div class="badges">
+⭐ Avaliação 4.7 no Google • Loja Oficial Ortobom • Até 12x sem juros
+</div>
+
+</section>
+
+<section class="features">
+<div class="feature">✔ Loja Oficial Ortobom</div>
+<div class="feature">✔ Entrega Rápida em BH</div>
+<div class="feature">✔ Até 12x Sem Juros</div>
+<div class="feature">✔ Garantia de Fábrica</div>
+</section>
+
+<section class="products">
+
+<h2>Modelos de Colchões Mais Procurados</h2>
+
+<div class="carousel-controls">
+<button class="carousel-btn" onclick="scrollCarousel(-1)">◀</button>
+<button class="carousel-btn" onclick="scrollCarousel(1)">▶</button>
+</div>
+
+<div class="product-carousel" id="productCarousel">
+
+<div class="product">
+<img loading="lazy" decoding="async" loading="lazy" src="prosaudeextra.jpg" alt="pro saude extra">
+<h3>Colchão Pro Saúde Extra</h3>
+<a class="product-btn"
+href="https://wa.me/5531996671868?text=Olá%20gostaria%20de%20saber%20sobre%20este%20colchão"
+target="_blank">
+
+Consultar Disponibilidade
+
+</a></div>
+
+<div class="product">
+<div class="badge-best">MAIS VENDIDO</div>
+<img loading="lazy" decoding="async" loading="lazy" src="ProSaudeSuperpocket.jpg.jpg" alt="Pro Saúde Superpocket">
+<h3>Colchão Pro Saúde</h3>
+<a class="product-btn"
+href="https://wa.me/5531996671868?text=Olá%20gostaria%20de%20saber%20sobre%20este%20colchão"
+target="_blank">
+
+Consultar Disponibilidade
+
+</a></div>
+
+<div class="product">
+<img loading="lazy" decoding="async" loading="lazy" src="pro força site.jpg" alt="Pro Força">
+<h3>Colchão Pro Força</h3>
+<a class="product-btn"
+href="https://wa.me/5531996671868?text=Olá%20gostaria%20de%20saber%20sobre%20este%20colchão"
+target="_blank">
+
+Consultar Disponibilidade
+
+</a></div>
+
+<div class="product">
+<img loading="lazy" decoding="async" loading="lazy" src="liberty site.jpg" alt="Ortopédico">
+<h3>Colchão Liberty</h3>
+<a class="product-btn"
+href="https://wa.me/5531996671868?text=Olá%20gostaria%20de%20saber%20sobre%20este%20colchão"
+target="_blank">
+
+Consultar Disponibilidade
+
+</a></div>
+
+<div class="product">
+<img loading="lazy" decoding="async" loading="lazy" src="absolut hybrid.jpg" alt="Ortopédico">
+<h3>Colchão Absolut Hybrid</h3>
+<a class="product-btn"
+href="https://wa.me/5531996671868?text=Olá%20gostaria%20de%20saber%20sobre%20este%20colchão"
+target="_blank">
+
+Consultar Disponibilidade
+
+</a></div>
+
+<div class="product">
+<img loading="lazy" decoding="async" loading="lazy" src="orion site.jpg" alt="Ortopédico">
+<h3>Colchão Orion</h3>
+<a class="product-btn"
+href="https://wa.me/5531996671868?text=Olá%20gostaria%20de%20saber%20sobre%20este%20colchão"
+target="_blank">
+
+Consultar Disponibilidade
+
+</a></div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="problem">
+
+<h2>Seu colchão pode estar prejudicando seu sono</h2>
+
+<p>Dores nas costas, cansaço ao acordar e noites mal dormidas são sinais claros de que está na hora de trocar seu colchão.</p>
+
+<a class="cta" href="https://wa.me/5531996671868?utm_source=landing_page&utm_medium=whatsapp&utm_campaign=trafego_pago&text=Ol%C3%A1%2C%20gostaria%20de%20saber%20sobre%20os%20colch%C3%B5es%20ortobom.">Quero ajuda para escolher</a>
+
+</section>
+
+<section class="why">
+
+<h2>Por que comprar na Ortobom Céu Azul?</h2>
+
+<div class="why-grid">
+
+<div class="why-card">Atendimento especializado para ajudar você a escolher o colchão ideal.</div>
+
+<div class="why-card">Colchões Ortobom originais com garantia de fábrica.</div>
+
+<div class="why-card">Entrega rápida em Belo Horizonte e região.</div>
+
+<div class="why-card">Parcelamento facilitado em até 12x sem juros.</div>
+
+</div>
+
+</section>
+
+<section class="testimonials">
+
+<h2>Avaliações reais do Google</h2>
+
+<p>⭐ Avaliação média 4.7 baseada em clientes da loja</p>
+
+<div class="testimonial">“Fui muito bem atendido e o colchão mudou totalmente minha qualidade de sono.”</div>
+
+<div class="testimonial">“Entrega rápida e atendimento excelente.”</div>
+
+<div class="testimonial">“Atendimento muito profissional e colchões de ótima qualidade.”</div>
+
+<a class="cta" href="https://www.google.com/search?q=ortobom+ceu+azul+belo+horizonte#lrd=0x0:0x0,1">Ver avaliações no Google</a>
+
+</section>
+
+<section class="contact">
+
+<div class="contact-box">
+
+<img loading="lazy" decoding="async" class="store-img" src="ortobom-logo-png.png" alt="Loja Ortobom Céu Azul">
+
+<h2>Visite nossa loja</h2>
+
+<p><strong>Endereço</strong><br>
+Rua Antônio José dos Santos, 548<br>
+Céu Azul – Belo Horizonte / MG</p>
+
+<p><strong>WhatsApp</strong><br>
+(31) 99667-1868</p>
+<p><strong>🕒 Horário de funcionamento</strong><br>
+Segunda a Sexta: 09:00 – 19:00<br>
+Sábado: 09:00 – 14:00<br>
+Domingo: 09:00 – 12:00
+</p>
+
+<a class="cta" href="https://wa.me/5531996671868?utm_source=landing_page&utm_medium=whatsapp&utm_campaign=trafego_pago&text=Ol%C3%A1%2C%20gostaria%20de%20saber%20sobre%20os%20colch%C3%B5es%20ortobom.">Falar no WhatsApp</a>
+
+<iframe loading="lazy" src="https://www.google.com/maps?q=Rua%20Antonio%20Jose%20dos%20Santos%20548%20Ceu%20Azul%20Belo%20Horizonte&output=embed"></iframe>
+
+</div>
+
+</section>
+
+<section class="lead">
+
+<style>
+  .product-btn{
+display:block;
+margin-top:10px;
+background:#0057B8;
+color:#fff;
+padding:12px 16px;
+border-radius:8px;
+font-weight:600;
+text-decoration:none;
+text-align:center;
+}
+
+.product-btn:hover{
+background:#003E8A;
+}
+.lead{
+padding:90px 20px;
+background:linear-gradient(180deg,#ffffff,#eef3ff);
+text-align:center;
+}
+
+.lead h2{
+color:var(--ortobom-blue);
+font-size:34px;
+margin-bottom:10px;
+}
+
+.lead p{
+color:#555;
+margin-bottom:40px;
+}
+
+.lead-container{
+max-width:900px;
+margin:auto;
+display:flex;
+flex-wrap:wrap;
+gap:30px;
+justify-content:center;
+}
+
+.lead-form{
+background:#fff;
+padding:35px;
+border-radius:16px;
+box-shadow:0 15px 40px rgba(0,0,0,0.08);
+flex:1;
+min-width:280px;
+max-width:420px;
+text-align:left;
+}
+
+.lead-form label{
+font-weight:600;
+font-size:14px;
+}
+
+.lead-form input{
+width:100%;
+padding:12px;
+margin-top:6px;
+margin-bottom:18px;
+border-radius:8px;
+border:1px solid #ddd;
+font-size:15px;
+}
+
+.lead-form button{
+width:100%;
+padding:14px;
+border:none;
+border-radius:10px;
+background:var(--ortobom-blue);
+color:#fff;
+font-weight:600;
+font-size:16px;
+cursor:pointer;
+}
+
+.lead-form button:hover{
+background:var(--ortobom-blue-dark);
+}
+
+.lead-contact{
+background:#fff;
+padding:35px;
+border-radius:16px;
+box-shadow:0 15px 40px rgba(0,0,0,0.08);
+flex:1;
+min-width:280px;
+max-width:420px;
+}
+
+.lead-contact h3{
+margin-bottom:20px;
+color:var(--ortobom-blue);
+}
+
+.lead-contact a{
+display:block;
+background:#25D366;
+color:#fff;
+padding:14px;
+border-radius:10px;
+text-decoration:none;
+font-weight:600;
+margin-bottom:15px;
+}
+
+.lead-contact a.instagram{
+background:linear-gradient(45deg,#833AB4,#E1306C,#F77737);
+}
+footer{
+background:var(--ortobom-blue-dark);
+color:#fff;
+padding:25px;
+margin-top:40px;
+text-align:center;
+}
+
+.footer-main{
+font-size:16px;
+}
+
+.footer-copy{
+font-size:11px;
+opacity:0.7;
+margin-top:6px;
+}
+</style>
+
+<h2>Nosso time pode ajudar você</h2>
+<p>Preencha seus dados e nossa equipe entrará em contato para ajudar a escolher o colchão ideal.</p>
+
+<div class="lead-container">
+
+<div class="lead-form">
+
+<form id="leadForm">
+<label>Nome</label>
+<input id="nome" type="text" placeholder="Digite seu nome" required>
+
+<label>E-mail</label>
+<input id="email" type="email" placeholder="Digite seu e-mail" required>
+
+<label>WhatsApp</label>
+<input id="telefone" type="tel" placeholder="(31) 99999-9999" required>
+
+<button type="submit">Receber Contato</button>
+</form>
+
+<script defer>
+const form = document.getElementById('leadForm');
+
+form.addEventListener('submit', function(e){
+ e.preventDefault();
+
+ const nome = document.getElementById('nome').value;
+ const email = document.getElementById('email').value;
+ const telefone = document.getElementById('telefone').value;
+
+ const mensagem = `Novo lead da Landing Page Ortobom:%0A%0ANome: ${nome}%0AEmail: ${email}%0AWhatsApp: ${telefone}`;
+
+ /* Envio automático para WhatsApp da loja */
+ const whatsappURL = `https://wa.me/5531996671868?text=${mensagem}`;
+ window.open(whatsappURL, '_blank');
+
+ /* Alerta por email */
+ const emailDestino = "seuemail@exemplo.com";
+ const assunto = "Novo Lead - Landing Page Ortobom";
+ const corpo = `Nome: ${nome}
+Email: ${email}
+WhatsApp: ${telefone}`;
+
+ const mailtoLink = `mailto:${emailDestino}?subject=${encodeURIComponent(assunto)}&body=${encodeURIComponent(corpo)}`;
+ window.location.href = mailtoLink;
+});
+</script>
+
+</div>
+
+<div class="lead-contact">
+
+<h3>Fale agora com a Ortobom Céu Azul</h3>
+
+<a href="https://wa.me/5531996671868?utm_source=landing_page&utm_medium=whatsapp&utm_campaign=trafego_pago&text=Ol%C3%A1%2C%20gostaria%20de%20saber%20sobre%20os%20colch%C3%B5es%20ortobom." target="_blank">Conversar pelo WhatsApp</a>
+
+<a class="instagram" href="https://www.instagram.com/ortobomceuazul?igsh=MTBkem94dXcyMDlqcg==" target="_blank">Enviar mensagem no Instagram</a>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<div class="footer-main">
+Ortobom Céu Azul • Belo Horizonte
+</div>
+
+<div class="footer-copy">
+© 2026 GT NEW VISION
+</div>
+
+</footer>
+
+<a class="whatsapp-float" href="https://wa.me/5531996671868?utm_source=landing_page&utm_medium=whatsapp&utm_campaign=trafego_pago&text=Ol%C3%A1%2C%20gostaria%20de%20saber%20sobre%20os%20colch%C3%B5es%20ortobom.">
+<img loading="lazy" decoding="async" src="botao-whats-2.png" alt="WhatsApp">
+</a>
+
+<script defer>
+
+/* contador de escassez */
+let tempo = 900;
+
+/* contador individual por visitante */
+const salvo = localStorage.getItem('promoTimer');
+const agora = Math.floor(Date.now()/1000);
+
+if(salvo){
+ const dados = JSON.parse(salvo);
+ const tempoPassado = agora - dados.inicio;
+ const restante = dados.duracao - tempoPassado;
+
+ if(restante > 0){
+  tempo = restante;
+ }else{
+  localStorage.setItem('promoTimer', JSON.stringify({inicio:agora,duracao:900}));
+  tempo = 900;
+ }
+}else{
+ localStorage.setItem('promoTimer', JSON.stringify({inicio:agora,duracao:900}));
+}
+
+function atualizarContador(){
+const horas = Math.floor(tempo/3600);
+const minutos = Math.floor((tempo%3600)/60);
+const segundos = tempo%60;
+
+const format = `${String(horas).padStart(2,'0')}:${String(minutos).padStart(2,'0')}:${String(segundos).padStart(2,'0')}`;
+
+const el=document.getElementById('countdown');
+if(el) el.innerText=format;
+
+if(tempo>0){tempo--}
+}
+
+setInterval(atualizarContador,1000);
+
+function scrollCarousel(direcao){
+
+const el = document.getElementById('productCarousel');
+const card = el.querySelector('.product');
+
+if(!card) return;
+
+const larguraCard = card.offsetWidth + 20;
+
+el.scrollBy({
+  left: direcao * larguraCard,
+  behavior: "smooth"
+});
+
+}
+
+/* rolagem automática */
+setInterval(function(){
+
+const el = document.getElementById('productCarousel');
+const card = el.querySelector('.product');
+
+if(!card) return;
+
+const larguraCard = card.offsetWidth + 20;
+
+el.scrollBy({
+  left: larguraCard,
+  behavior:'smooth'
+});
+
+if(el.scrollLeft + el.clientWidth >= el.scrollWidth){
+  el.scrollTo({left:0,behavior:'smooth'});
+}
+
+},3500);
+
+/* carrossel automático do banner */
+
+let bannerIndex = 0;
+const banners = document.querySelectorAll(".banner-slide");
+
+setInterval(() => {
+
+banners[bannerIndex].classList.remove("active");
+
+bannerIndex++;
+if(bannerIndex >= banners.length){
+bannerIndex = 0;
+}
+
+banners[bannerIndex].classList.add("active");
+
+}, 4000);
+
+</script>
+
+</body>
+</html>
